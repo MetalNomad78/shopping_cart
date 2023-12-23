@@ -82,10 +82,9 @@ class Fruits extends StatelessWidget {
                         itemPrice: value.shopFruits[index][1],
                         imagePath: value.shopFruits[index][2],
                         color: value.shopFruits[index][3],
-                          onPressed:(){
-                            Provider.of<CartModel>(context,listen:false).addItemToCart(index);
 
-                          }
+                          onPressed:()=>
+                            Provider.of<CartModel>(context,listen:false).addItemToCar(index),
                       );
                     },
                   );
@@ -114,6 +113,7 @@ class Fruits extends StatelessWidget {
         )
 
       ),
+
     );
   }
 }

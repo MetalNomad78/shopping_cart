@@ -4,6 +4,7 @@ class ItemTile extends StatelessWidget {
   final String itemPrice;
   final String imagePath;
   final Color color;
+
   final void Function()? onPressed;
 
   const ItemTile({
@@ -41,10 +42,10 @@ class ItemTile extends StatelessWidget {
               ),
             ),
             MaterialButton(
-                onPressed: (){},
+                onPressed: onPressed,
               color: color.withOpacity(0.8),
               child: Text(
-                  ' Rs ' + itemPrice +' per kg',
+                  'Rs. ' + itemPrice +' per Kg',
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 14,

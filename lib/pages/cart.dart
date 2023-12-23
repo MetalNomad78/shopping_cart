@@ -64,10 +64,10 @@ class CartPage extends StatelessWidget {
           leading: Image.asset(value.cartItems[index][2],
           height:36,),
         title: Text(value.cartItems[index][0]),
-          subtitle: Text('Rs' + value.cartItems[index][1]),
+          subtitle: Text('Rs. ' + value.cartItems[index][1]),
           trailing: IconButton(
               icon:const Icon(Icons.cancel),
-      onPressed:()=> Provider.of<CartModel>(context,listen:false).removeItemFromCart(index))
+      onPressed:()=> Provider.of<CartModel>(context,listen:false).removeItemFromCart(index,value.cartItems[index][4]))
         ),
       ),
     );
@@ -98,9 +98,9 @@ class CartPage extends StatelessWidget {
                     ),
 
                   ),
-                  Text(value.calculateTotal(),
+                  Text('Rs. ' + value.calculateTotal(),
                   style: const TextStyle(
-                    fontSize: 22,
+                    fontSize: 50,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),)

@@ -82,10 +82,8 @@ class HomePage extends StatelessWidget {
                         itemPrice: value.shopItems[index][1],
                         imagePath: value.shopItems[index][2],
                         color: value.shopItems[index][3],
-                        onPressed:(){
-                          Provider.of<CartModel>(context,listen:false).addItemToCart(index);
-
-                        }
+                        onPressed:()=>
+                          Provider.of<CartModel>(context,listen:false).addItemToCart(index),
                       );
                     },
                   );
